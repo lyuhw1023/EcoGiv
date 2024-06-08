@@ -41,38 +41,38 @@
     <img class="sec_img" src="images/main6.jpg" alt="wind"/>
 
     <!-- 서비스 섹션 -->
-    <section id="our-service">
-    	<div class="container">
-        	<!-- 제목과 소제목 -->
-        	<div class="section-header">
-            	<h1>주요 기능 소개</h1>
-<!--             	<p>EcoGiv의 주 기능 3가지로 바로 이동합니다.</p> -->
-        	</div>
-        
-        	<!-- 서비스 박스 컨테이너 -->
-        	<div class="services-container">
-            	<!-- 개별 서비스 박스 -->
-            	<div class="service-box">
-                	<span class="service-number">01</span>
-                	<h2>캠페인 소개</h2>
-                	<p>EcoGiv는 다양한 환경 보호 캠페인을 소개합니다. 각 캠페인을 통해 우리가 환경을 지키는 방법들을 쉽게 배울 수 있습니다.</p>
-                	<button class="service-button">Learn More</button>
-            	</div>
-            	<div class="service-box">
-                	<span class="service-number">02</span>
-                	<h2>기부하기</h2>
-                	<p>여러분의 작은 기부가 큰 변화를 만들어 나갑니다. 지금 기부 페이지를 방문하여 지구를 지키는 데 동참해보세요.</p>
-                	<button class="service-button">Learn More</button>
-            	</div>
-            	<div class="service-box">
-                	<span class="service-number">03</span>
-                	<h2>커뮤니티</h2>
-                	<p>환경 보호에 관심 있는 사람들과 소통해 보세요. 커뮤니티에서 다양한 의견을 나누고 유용한 정보를 공유하세요.</p>
-                	<button class="service-button">Learn More</button>
-            	</div>
-        	</div>
-    	</div>
-	</section>
+<section id="our-service">
+    <div class="container">
+        <!-- 제목과 소제목 -->
+        <div class="section-header">
+            <h1>주요 기능 소개</h1>
+        </div>
+    
+        <!-- 서비스 박스 컨테이너 -->
+        <div class="services-container">
+            <!-- 개별 서비스 박스 -->
+            <div class="service-box">
+                <span class="service-number">01</span>
+                <h2>캠페인 소개</h2>
+                <p>EcoGiv는 다양한 환경 보호 캠페인을 소개합니다. 각 캠페인을 통해 우리가 환경을 지키는 방법들을 쉽게 배울 수 있습니다.</p>
+                <a href="introduce.jsp"><button class="service-button">Learn More</button></a>
+            </div>
+            <div class="service-box">
+                <span class="service-number">02</span>
+                <h2>기부하기</h2>
+                <p>여러분의 작은 기부가 큰 변화를 만들어 나갑니다. 지금 기부 페이지를 방문하여 지구를 지키는 데 동참해보세요.</p>
+                <a href="donation.jsp"><button class="service-button">Learn More</button></a>
+            </div>
+            <div class="service-box">
+                <span class="service-number">03</span>
+                <h2>커뮤니티</h2>
+                <p>환경 보호에 관심 있는 사람들과 소통해 보세요. 커뮤니티에서 다양한 의견을 나누고 유용한 정보를 공유하세요.</p>
+                <a href="community.jsp"><button class="service-button">Learn More</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+
     
 
     <!-- 소개 섹션 -->
@@ -99,6 +99,34 @@
         	</div>
     	</div>
 	</section>
+	
+	<!-- 컨택 섹션 -->
+<footer>
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="logo-text">
+                <img src="images/logo.png" alt="Logo" class="footer-logo">
+                <h2>EcoGiv</h2>
+            </div>
+            <p>한림대학교 | 제작자 유혜원 | 대표전화 010 - 1234 - 5678 |</p>
+            <p>이메일 lyuhw11023@gmail.com | 상담시간 (월~금) 10:00 ~ 17:00 |</p>
+            <p>© 환경 보호 캠페인 플랫폼</p>
+        </div>
+        <div class="sponsor-info">
+            <h2>후원계좌</h2>
+            <p>국민은행 123123-000000 | 농협은행 078-01-123123</p>
+            <p>신한은행 100-012-345678 | KEB하나은행 225-234234-234</p>
+            <p>우리은행 1002-123-123123 | 우체국 034534-01-34534</p>
+        </div>
+    </div>
+    <div class="social-icons">
+        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+    </div>
+</footer>
+
 
 
     <script src="main.js"></script>
