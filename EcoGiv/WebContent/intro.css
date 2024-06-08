@@ -1,0 +1,229 @@
+/* 네비게이션 */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 배경글씨-메인 */
+@font-face {
+    font-family: 'TTLaundryGothicB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 기본 스타일 초기화 */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 네비게이션 바 스타일 */
+nav {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    padding-left: 30px;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+#navbar.scroll-active {
+    background-color: white;
+}
+
+#navbar ul {
+    display: flex;
+    padding-right: 50px;
+}
+
+#logo {
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    font-family: 'TTLaundryGothicB';
+}
+/* 로고 이미지 스타일 */
+.logo-image {
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.menu {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding-right: 80px;
+    font-family: 'Pretendard-Regular';
+}
+
+/* 첫 화면 스타일 */
+#main {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+#main::after {
+    width: 100%;
+    height: 300px;
+    content: "";
+    background: url(images/main4.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#contents {
+    position: absolute;
+    width: 100%;
+    padding-top: 150px;
+    color: black;
+    text-align: center;
+}
+
+#main_txt {
+    font-size: 90px;
+    font-family: 'TTLaundryGothicB';
+}
+
+/* 공통 컨테이너 스타일 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+
+/* 텍스트 및 괄호 이미지 섹션 스타일 */
+#intro-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+#intro-text .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.bracket {
+    width: 50px;
+    height: auto;
+}
+
+.intro-text-content {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.intro-text-content h2 {
+    font-size: 2em;
+    color: #777; /* 회색 텍스트 */
+}
+
+.intro-text-content h2 .highlight {
+    color: #2e8b57; /* 짙은 초록색 텍스트 */
+}
+
+.intro-text-content p {
+    font-size: 1.2em;
+    color: #555;
+    white-space: pre-line; /* 엔터가 쳐진 것처럼 보이게 설정 */
+}
+
+
+
+/* 캠페인 섹션 스타일 */
+#campaign {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#campaign h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.gallery-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-top: 100px;
+}
+
+.gallery-table td {
+    padding: 10px;
+    vertical-align: top;
+    width: 33.33%; /* 각 셀의 너비를 33.33%로 설정 */
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    height: 250px; /* 각 아이템의 높이를 250px로 설정 */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%; /* 모든 이미지를 동일한 높이로 설정 */
+    display: block;
+    border: none;
+    object-fit: cover; /* 이미지가 지정된 영역을 채우도록 설정 */
+    transition: none; /* 이미지가 커지지 않도록 설정 */
+    pointer-events: auto; /* 링크 클릭 가능하도록 설정 */
+}
+
+/* 오버레이 스타일 */
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 100%; /* 오른쪽에서 시작 */
+    width: 100%;
+    height: 100%; /* 높이를 100%로 설정 */
+    background: rgba(0, 128, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+    opacity: 0;
+    z-index: 2; /* 오버레이의 z-index를 2로 설정 */
+    transition: left 0.3s ease, opacity 0.3s ease;
+    pointer-events: none; /* 오버레이는 클릭 불가능하도록 설정 */
+}
+
+.gallery-item:hover .overlay {
+    left: 0; /* 왼쪽으로 이동 */
+    opacity: 1;
+}
