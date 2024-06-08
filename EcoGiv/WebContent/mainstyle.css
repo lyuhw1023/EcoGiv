@@ -156,6 +156,14 @@ nav {
     font-size: 40px;
     font-family: 'TTLaundryGothicB';
 }
+/* 추가된 로고 이미지 스타일 */
+.logo-image {
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
 
 .menu {
     text-decoration: none;
@@ -165,13 +173,6 @@ nav {
     font-family: 'Pretendard-Regular';
 }
 
-#signup {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    padding-right: 30px;
-    font-family: 'Pretendard-Regular';
-}
 
 /* 인용문구 스타일 */
 .msg_img1 {
@@ -214,12 +215,12 @@ nav {
 /* 서비스 섹션 스타일 */
 #our-service {
     text-align: center;
-    padding: 250px 20px;
+    padding: 125px 20px; 
 }
 
 .section-header h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .section-header p {
@@ -231,7 +232,7 @@ nav {
 .services-container {
     display: flex;
     justify-content: space-around;
-    gap: 20px; 
+    gap: 50px; 
     margin-top: 20px;
 }
 
@@ -281,7 +282,7 @@ nav {
 }
 
 .service-button:hover {
-    background-color: #e64a19;
+    background-color: rgb(105, 91, 98);
 }
 
 
@@ -556,6 +557,7 @@ td{
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 30px; /* 각 이미지 사이의 공간 */
+    margin-top:100px;
 }
 
 .service {
@@ -591,6 +593,7 @@ td{
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
+    margin-top:100px;
 }
 
 .gallery-table td {
