@@ -4,21 +4,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Campaign</title>
+    <title>Campaign Introduce</title>
     <link href="intro.css" rel="stylesheet">
 </head>
 <body>
     <nav id="navbar">
-        <a href="home.jsp" id="logo">
-            <img src="images/logo.png" alt="Logo" class="logo-image">EcoGiv</a>
-        <ul>
-            <li><a href="home.jsp" class="menu">Home</a></li>
-            <li><a href="introduce.jsp" class="menu">Campaign</a></li>
-            <li><a href="donation.jsp" class="menu">Donation</a></li>
-            <li><a href="community.jsp" class="menu">Community</a></li>
-            <li><a href="login.jsp" class="menu">Login</a></li>
-        </ul>
-    </nav>
+    <a href="home.jsp" id="logo">
+        <img src="images/logo.png" alt="Logo" class="logo-image">
+        EcoGiv
+    </a>
+    <ul>
+        <li><a href="home.jsp" class="menu">홈</a></li>
+        <li><a href="introduce.jsp" class="menu">캠페인소개</a></li>
+        <li><a href="donation.jsp" class="menu">후원안내</a></li>
+        <li><a href="community.jsp" class="menu">커뮤니티</a></li>
+    </ul>
+    <div class="nav-buttons">
+        <a href="donation.jsp" class="donate-button">후원하기</a>
+        <a href="login.jsp" class="login-button">로그인</a>
+    </div>
+</nav>
 
     <div id="main" style="background-image: url('images/main4.jpg'); background-size: cover; background-position: center;">
         <div id="contents">
@@ -51,13 +56,13 @@
                     </td>
                     <td>
                         <div class="gallery-item">
-                            <a href="campaign2.jsp"><img src="images/img2.jpg" alt="Image 2"></a>
+                            <a href="c2_plastic.jsp"><img src="images/img2.jpg" alt="Image 2"></a>
                             <div class="overlay">플라스틱 제로</div>
                         </div>
                     </td>
                     <td>
                         <div class="gallery-item">
-                            <a href="campaign3.jsp"><img src="images/img3.jpg" alt="Image 3"></a>
+                            <a href="c3_fishing.jsp"><img src="images/img3.jpg" alt="Image 3"></a>
                             <div class="overlay">불법 어업 근절</div>
                         </div>
                     </td>
@@ -65,19 +70,19 @@
                 <tr>
                     <td>
                         <div class="gallery-item">
-                            <a href="campaign4.jsp"><img src="images/img4.jpg" alt="Image 4"></a>
+                            <a href="c4_it.jsp"><img src="images/img4.jpg" alt="Image 4"></a>
                             <div class="overlay">Rethink IT</div>
                         </div>
                     </td>
                     <td>
                         <div class="gallery-item">
-                            <a href="campaign5.jsp"><img src="images/img5.jpg" alt="Image 5"></a>
+                            <a href="c5_outdoor.jsp"><img src="images/img5.jpg" alt="Image 5"></a>
                             <div class="overlay">디톡스 아웃도어</div>
                         </div>
                     </td>
                     <td>
                         <div class="gallery-item">
-                            <a href="campaign6.jsp"><img src="images/img6.jpg" alt="Image 6"></a>
+                            <a href="c6_amazon.jsp"><img src="images/img6.jpg" alt="Image 6"></a>
                             <div class="overlay">아마존 보호</div>
                         </div>
                     </td>
@@ -85,19 +90,19 @@
                 <tr>
                     <td>
                         <div class="gallery-item">
-                            <a href="campaign7.jsp"><img src="images/img7.jpg" alt="Image 7"></a>
+                            <a href="c7_biodiversity.jsp"><img src="images/img7.jpg" alt="Image 7"></a>
                             <div class="overlay">생물 다양성</div>
                         </div>
                     </td>
                     <td>
                         <div class="gallery-item">
-                            <a href="campaign8.jsp"><img src="images/img8.jpg" alt="Image 8"></a>
+                            <a href="c8_climate.jsp"><img src="images/img8.jpg" alt="Image 8"></a>
                             <div class="overlay">기후참정권</div>
                         </div>
                     </td>
                     <td>
                         <div class="gallery-item">
-                            <a href="campaign9.jsp"><img src="images/img9.jpg" alt="Image 9"></a>
+                            <a href="c9_nuclear.jsp"><img src="images/img9.jpg" alt="Image 9"></a>
                             <div class="overlay">탈원전</div>
                         </div>
                     </td>
@@ -105,19 +110,19 @@
                 <tr>
                     <td>
                         <div class="gallery-item">
-                            <a href="campaign10.jsp"><img src="images/img10.jpg" alt="Image 10"></a>
-                            <div class="overlay">기업 100% 재생 에너지 전환</div>
+                            <a href="c10_renewable.jsp"><img src="images/img10.jpg" alt="Image 10"></a>
+                            <div class="overlay">기업 100% <br>재생 에너지 전환</div>
                         </div>
                     </td>
                     <td>
                         <div class="gallery-item">
-                            <a href="campaign11.jsp"><img src="images/img11.jpg" alt="Image 11"></a>
+                            <a href="c11_coal.jsp"><img src="images/img11.jpg" alt="Image 11"></a>
                             <div class="overlay">위험한 석탄투자</div>
                         </div>
                     </td>
                     <td>
                         <div class="gallery-item">
-                            <a href="campaign12.jsp"><img src="images/img12.jpg" alt="Image 12"></a>
+                            <a href="c12_arctic.jsp"><img src="images/img12.jpg" alt="Image 12"></a>
                             <div class="overlay">북극 보호</div>
                         </div>
                     </td>

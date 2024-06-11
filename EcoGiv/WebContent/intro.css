@@ -35,22 +35,24 @@ nav {
     position: fixed;
     z-index: 1000;
     padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
 }
 
 #navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
-}
-
-#navbar.scroll-active {
-    background-color: white;
+    width: 100%;
 }
 
 #navbar ul {
     display: flex;
-    padding-right: 50px;
+    padding-left: 150px;
+    margin: 0; /* Ensure there is no extra margin */
+    align-items: center; /* Align items vertically centered */
 }
 
 #logo {
@@ -58,9 +60,10 @@ nav {
     color: black;
     font-size: 40px;
     font-family: 'TTLaundryGothicB';
+    display: flex;
+    align-items: center;
 }
 
-/* 로고 이미지 스타일 */
 .logo-image {
     height: 40px;
     margin-right: 10px;
@@ -70,9 +73,40 @@ nav {
 .menu {
     text-decoration: none;
     color: black;
-    font-size: 20px;
-    padding-right: 80px;
+    font-size: 23px;
+    padding-right: 100px; /* Adjusted padding */
     font-family: 'Pretendard-Regular';
+    font-weight: bold;
+}
+
+.menu:hover {
+    color: #333333; /* 마우스 올렸을 때 글씨 색 변경 (황금색 예시) */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 30px;
+    align-items: center; /* Ensure buttons are vertically centered */
+    margin-right: 80px; /* Added margin to ensure it fits within the navbar */
+}
+
+.donate-button,
+.login-button {
+    background-color: #1B365C; /* Updated color */
+    color: white; /* Ensure text is visible */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: 'Pretendard-Regular';
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+}
+
+.donate-button:hover,
+.login-button:hover {
+    background-color: #356AB5; /* Updated hover color */
+    text-decoration: none; /* Ensure no underline on hover */
 }
 
 /* 첫 화면 스타일 */
@@ -207,12 +241,13 @@ nav {
     left: 100%; /* 오른쪽에서 시작 */
     width: 100%;
     height: 100%; /* 높이를 100%로 설정 */
-    background: rgba(0, 128, 0, 0.6);
+    background: rgba(0, 128, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 1.5em;
+    font-size: 35px;
+    font-family: 'Pretendard-Regular';
     opacity: 0;
     z-index: 2; /* 오버레이의 z-index를 2로 설정 */
     transition: left 0.3s ease, opacity 0.3s ease;
@@ -288,6 +323,39 @@ footer {
 
 /* 세부페이지 */
 
+#sub_main {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure child elements are not out of bounds */
+    background-size: cover;
+    background-position: center;
+}
+
+#sub_main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: -1;
+}
+
+#sub_contents {
+    z-index: 2; 
+    text-align: center;
+    padding-top: 110px;
+}
+
+
+
 
 
 /* About Us 페이지 스타일 */
@@ -310,9 +378,9 @@ footer {
     margin-bottom: 100px; /* Space below the line */
 }
 
-.about-header h1 {
+.green_h1 {
     font-size: 36px;
-    color: black;
+    color: #2e8b57 ;
     margin: 10px 0;
 }
 
@@ -338,14 +406,15 @@ footer {
 
 .about-section h3 {
     font-size: 28px;
-    color: #2c3e50;
+    color: #2e8b57;
     margin-bottom: 20px;
 }
 
 .about-section p {
     font-size: 18px;
-    color: #7f8c8d;
+    color: #777;
     line-height: 1.6;
+    font-weight: bold;
 }
 
 .about-section ul {
@@ -379,12 +448,6 @@ footer {
     text-align: center;
 }
 
-.timeline-container h1 {
-    font-size: 36px;
-    color: black;
-    margin: 10px 0;
-}
-
 .timeline-container h2 {
     font-size: 24px;
     color: #777;
@@ -397,6 +460,7 @@ footer {
 
 .timeline-content p {
     color: #777;
+    font-weight: bold;
 }
 
 .timeline {
@@ -468,12 +532,6 @@ footer {
     text-align: center;
 }
 
-.campaign-container h1 {
-    font-size: 36px;
-    color: black;
-    margin: 10px 0;
-}
-
 .campaign-container h2 {
     font-size: 24px;
     color: #777;
@@ -487,6 +545,7 @@ footer {
 
 .campaign-container p {
     color: #777;
+    font-weight: bold;
 }
 
 .campaign-timeline {
@@ -553,8 +612,30 @@ footer {
 .donation-container {
     text-align: center;
     padding: 50px 0;
-    background-color: rgba(46, 139, 87, 0.8); /* Background color with opacity */
+    background-size: cover;
+    background-position: center;
+    position: relative;
     color: white;
+    overflow: hidden; /* Ensure child elements are not out of bounds */
+}
+
+.donation-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly dark overlay */
+    z-index: 1;
+}
+
+.donation-container h1,
+.donation-container h2,
+.donation-container p,
+.donation-button {
+    position: relative;
+    z-index: 2;
 }
 
 .donation-container h1 {
@@ -563,7 +644,7 @@ footer {
 }
 
 .donation-container h2 {
-    font-size: 30px;
+    font-size: 40px;
     margin: 10px 0;
 }
 
@@ -573,7 +654,7 @@ footer {
 }
 
 .donation-button {
-    background-color: #17782C; /* Button color */
+    background-color: #1B365C; /* Button color */
     color: white;
     border: none;
     padding: 15px 30px;
@@ -584,5 +665,82 @@ footer {
 }
 
 .donation-button:hover {
-    background-color: #006400; /* Hover color */
+    background-color: #356AB5; /* Hover color */
+}
+
+
+
+
+
+
+
+/* 기부하기 */
+
+/* 후원 참여 방법 섹션 */
+#donation-methods {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#donation-methods .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Flex-start로 수정하여 중앙 정렬 */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.donation-card {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 300px; /* 정사각형을 위해 높이와 너비를 동일하게 설정 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center;
+}
+
+.donation-card img {
+    width: 70px; /* 아이콘 크기를 키움 */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.donation-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.donation-card p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.donation-button-container {
+    margin-top: 80px; /* 박스들과 버튼 사이에 공간 추가 */
+    text-align: center;
+}
+
+.donation-button {
+    background-color: #2e8b57  ;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.donation-button:hover {
+    background-color: #006400; 
 }
