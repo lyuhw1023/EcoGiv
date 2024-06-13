@@ -744,3 +744,158 @@ footer {
 .donation-button:hover {
     background-color: #006400; 
 }
+
+
+
+/* 후원하기 폼 섹션 */
+.donation-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.donation-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.donation-info, .basic-info, .payment-info, .agreement {
+    margin-bottom: 20px;
+}
+
+.donation-info label, .basic-info label, .payment-info label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.donation-info input[type="text"], .basic-info input[type="text"], .basic-info input[type="email"], .payment-info input[type="text"], .payment-info select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.donation-amount {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.donation-amount input[type="radio"] {
+    display: none;
+}
+
+.donation-amount label {
+    background: #eee;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1 1 30%;
+    text-align: center;
+}
+
+.donation-amount input[type="radio"]:checked + label {
+    background: #333;
+    color: white;
+}
+
+.agreement {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.agreement input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.donation-submit-button {
+    width: 100%;
+    padding: 15px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.donation-submit-button:hover {
+    background: #555;
+}
+
+
+
+
+
+
+
+
+
+/* 로그인 페이지 스타일 */
+.login-container {
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    padding: 50px;
+    border: 3px solid #2e8b57 ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+}
+
+.login-container .login-icon {
+    width: 50px; /* Reduced size of the icon */
+    margin-bottom: 20px;
+}
+
+.login-container h2 {
+    margin-bottom: 40px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 377px;
+    height:30px;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2e8b57 ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+}
+
+.login-container button:hover {
+    background-color: #006400;
+}
+
+.login-container .register-link {
+    margin-top: 10px;
+    display: block;
+    color: gray;
+    text-decoration: none;
+}
+
+.login-container .register-link:hover {
+    text-decoration: underline;
+}
+

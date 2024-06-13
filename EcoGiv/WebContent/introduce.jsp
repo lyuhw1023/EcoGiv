@@ -1,29 +1,41 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="javax.servlet.http.*, javax.servlet.*" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Campaign Introduce</title>
+    <title>캠페인 소개</title>
     <link href="intro.css" rel="stylesheet">
 </head>
 <body>
     <nav id="navbar">
-    <a href="home.jsp" id="logo">
-        <img src="images/logo.png" alt="Logo" class="logo-image">
-        EcoGiv
-    </a>
-    <ul>
-        <li><a href="home.jsp" class="menu">홈</a></li>
-        <li><a href="introduce.jsp" class="menu">캠페인소개</a></li>
-        <li><a href="donation.jsp" class="menu">후원안내</a></li>
-        <li><a href="community.jsp" class="menu">커뮤니티</a></li>
-    </ul>
-    <div class="nav-buttons">
-        <a href="donation.jsp" class="donate-button">후원하기</a>
-        <a href="login.jsp" class="login-button">로그인</a>
-    </div>
-</nav>
+        <a href="home.jsp" id="logo">
+            <img src="images/logo.png" alt="Logo" class="logo-image">
+            EcoGiv
+        </a>
+        <ul>
+            <li><a href="home.jsp" class="menu">홈</a></li>
+            <li><a href="introduce.jsp" class="menu">캠페인소개</a></li>
+            <li><a href="donation.jsp" class="menu">후원안내</a></li>
+            <li><a href="community.jsp" class="menu">커뮤니티</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <%
+                HttpSession currentSession = request.getSession(false);
+                String username = null;
+                if (currentSession != null) {
+                    username = (String) currentSession.getAttribute("username");
+                }
+                if (username != null) {
+            %>
+                <span><%= username %>님</span>
+                <a href="donation_do.jsp" class="donate-button">후원하기</a>
+                <a href="logout.jsp" class="login-button">로그아웃</a>
+            <% } else { %>
+                <a href="donation_do.jsp" class="donate-button">후원하기</a>
+                <a href="login.jsp" class="login-button">로그인</a>
+            <% } %>
+        </div>
+    </nav>
 
     <div id="main" style="background-image: url('images/main4.jpg'); background-size: cover; background-position: center;">
         <div id="contents">
@@ -157,5 +169,9 @@
             <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
         </div>
     </footer>
+    <!-- 맨 위로 가기 버튼 -->
+    <a href="#" id="back-to-top" class="back-to-top"></a>
+
+    <script src="main.js"></script>
 </body>
 </html>
