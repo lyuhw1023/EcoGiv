@@ -36,10 +36,10 @@
           UserDAO userDAO = new UserDAO(dbConnection);
           userDAO.addUser(newUser);
 
-          out.println("<script type='text/javascript'>showPopup('회원가입 되었습니다.', 'home.jsp');</script>");
+          out.println("<script type='text/javascript'>showPopup('회원가입이 성공적으로 처리되었습니다.', 'home.jsp');</script>");
       } catch (Exception e) {
           e.printStackTrace();
-          out.println("<script type='text/javascript'>showPopup('회원가입이 실패했습니다. 다시 회원가입 해주세요.', null);</script>");
+          out.println("<script type='text/javascript'>showPopup('회원가입이 실패했습니다. 다시 시도해 주세요.', null);</script>");
       }
    %>
 </body>
