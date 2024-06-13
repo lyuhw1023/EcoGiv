@@ -50,7 +50,6 @@
             <img src="images/open.png" alt="Left Bracket" class="bracket">
             <div class="intro-text-content">
                 <h2>우리의 <span class="highlight">환경</span>을 지키기 위한 <span class="highlight">작은 실천</span>이 큰 변화를 만듭니다.</h2>
-                <!-- <h2><span class="highlight">환경</span>을 지켜주세요.</h2> -->
                 <p>지금 이 순간에도 지구는 오염과 파괴로부터 보호받기 위해 싸우고 있습니다. <br>우리의 미래와 다음 세대를 위해 환경 보호에 힘써야 할 때입니다. 하지만 혼자서 해결할 수 없는 거대한 도전입니다. 
                 함께 모여 자연을 지키는 일에 동참해 주세요. 여러분의 작은 기부가 모여 큰 변화를 만들 수 있습니다.</p>
             </div>
@@ -81,6 +80,19 @@
         <a href="donation_do.jsp" class="donation-button">후원하기</a>
     </div>
 </section>
+
+
+
+	<!-- 후원 텍스트 -->
+	<br><br><br>
+    <section id="intro-text">
+        <div class="container">
+            <div class="intro-text-content">
+                <h2><span class="highlight">환경 보호</span>를 위한 당신의 <span class="highlight">기부</span>가 세상을 <span class="highlight">변화</span>시킵니다.</h2>
+                <p>기부를 통해 지구를 살립시다! 여러분의 소중한 기부는 우리 모두가 꿈꾸는 더 깨끗하고 건강한 지구를 만들어갑니다.</p>
+            </div>
+        </div>
+    </section>
 
 
 

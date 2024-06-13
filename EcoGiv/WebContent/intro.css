@@ -747,10 +747,10 @@ footer {
 
 
 
-/* 후원하기 폼 섹션 */
+/* 후원하기 폼 스타일링 */
 .donation-form-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 20px;
     background: #f9f9f9;
     border-radius: 10px;
@@ -759,8 +759,9 @@ footer {
 
 .donation-form-container h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: #333;
+    font-size: 40px;
 }
 
 .donation-info, .basic-info, .payment-info, .agreement {
@@ -771,20 +772,66 @@ footer {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .donation-info input[type="text"], .basic-info input[type="text"], .basic-info input[type="email"], .payment-info input[type="text"], .payment-info select {
-    width: 100%;
+    width: calc(100% - 110px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    float: right;
+}
+
+.donation-info .input-group, .basic-info .input-group, .payment-info .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.donation-info .input-group label, .basic-info .input-group label, .payment-info .input-group label {
+    width: 100px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.toggle-buttons {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #eee;
+    width: 345px;
+}
+
+.toggle-buttons.active {
+    background: #2e8b57;
+    color: white;
+}
+
+.toggle-button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #eee;
+    width: 165px;
+}
+
+.toggle-button.active {
+    background: #2e8b57 ;
+    color: white;
 }
 
 .donation-amount {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    width: 700px;
 }
 
 .donation-amount input[type="radio"] {
@@ -802,24 +849,55 @@ footer {
 }
 
 .donation-amount input[type="radio"]:checked + label {
-    background: #333;
+    background: #2e8b57;
     color: white;
 }
 
 .agreement {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.agreement label {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
     gap: 10px;
 }
 
 .agreement input[type="checkbox"] {
-    margin-right: 10px;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    outline: none;
+    cursor: pointer;
 }
 
-.donation-submit-button {
+.agreement input[type="checkbox"]:checked::before {
+    content: '\2713';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+button.donation-submit-button {
     width: 100%;
     padding: 15px;
-    background: #333;
+    margin: 50px 0;
+    background: #2e8b57 ;
     color: white;
     border: none;
     border-radius: 5px;
@@ -827,8 +905,8 @@ footer {
     font-size: 16px;
 }
 
-.donation-submit-button:hover {
-    background: #555;
+button.donation-submit-button:hover {
+    background:#006400;
 }
 
 
