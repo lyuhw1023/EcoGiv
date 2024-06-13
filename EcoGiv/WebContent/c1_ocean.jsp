@@ -4,40 +4,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Campaign</title>
+    <title>해양 보호</title>
     <link href="intro.css" rel="stylesheet">
 </head>
 <body>
     <nav id="navbar">
-        <a href="home.jsp" id="logo">
-            <img src="images/logo.png" alt="Logo" class="logo-image">EcoGiv</a>
-        <ul>
-            <li><a href="home.jsp" class="menu">Home</a></li>
-            <li><a href="introduce.jsp" class="menu">Campaign</a></li>
-            <li><a href="donation.jsp" class="menu">Donation</a></li>
-            <li><a href="community.jsp" class="menu">Community</a></li>
-            <li><a href="login.jsp" class="menu">Login</a></li>
-        </ul>
-    </nav>
-
-    <div id="main" style="background-image: url('images/img1.jpg'); background-size: cover; background-position: center;">
-        <div id="contents">
-            <h1 id="main_txt_w">해양 보호</h1><br><br>
+    <a href="home.jsp" id="logo">
+        <img src="images/logo.png" alt="Logo" class="logo-image">
+        EcoGiv
+    </a>
+    <ul>
+        <li><a href="home.jsp" class="menu">홈</a></li>
+        <li><a href="introduce.jsp" class="menu">캠페인소개</a></li>
+        <li><a href="donation.jsp" class="menu">후원안내</a></li>
+        <li><a href="community.jsp" class="menu">커뮤니티</a></li>
+    </ul>
+    <div class="nav-buttons">
+            <%
+                HttpSession currentSession = request.getSession(false);
+                String username = null;
+                if (currentSession != null) {
+                    username = (String) currentSession.getAttribute("username");
+                }
+                if (username != null) {
+            %>
+                <span><%= username %>님</span>
+                <a href="donation_do.jsp" class="donate-button">후원하기</a>
+                <a href="logout.jsp" class="login-button">로그아웃</a>
+            <% } else { %>
+                <a href="donation_do.jsp" class="donate-button">후원하기</a>
+                <a href="login.jsp" class="login-button">로그인</a>
+            <% } %>
         </div>
+</nav>
+
+<div id="sub_main" style="background-image: url('images/img1.jpg');">
+    <div id="sub_contents">
+        <h1 id="main_txt_w">해양 보호</h1><br><br>
     </div>
-    
+</div>
+
+	
     <!-- about -->
     <div class="about-container">
     <header class="about-header">
         <div class="about-line"></div>
-        <h1>캠페인 목표</h1>
-        <h2>바다를 지속가능한 공간으로 보호하기 위해 한국을 포함한 UN회원국에 해양조약 제정을 요구해, 국제적 구속력을 갖는 ‘해양보호구역’을 지정하고자 합니다.</h2>
+        <h1 class="green_h1">캠페인 목표</h1>
+        <h2>바다를 지속가능한 공간으로 보호하기 위해 한국을 포함한 UN회원국에 해양조약 제정을 요구해,<br> 국제적 구속력을 갖는 ‘해양보호구역’을 지정하고자 합니다.</h2>
     </header>
     <div class="about-content">
         <div class="about-section know">
-            <h3>알고 계셨나요?</h3>
+            <h3>알고 계셨나요?<br><br></h3>
             <p>전체 바다 면적의 61%에 달하는 공해(公海)가 인류의 이윤 추구 활동으로부터 전혀 보호받지 못하고 있습니다. 
-            바다를 보호하기 위한 가장 효과적인 방법에도 불구하고 어업, 과학실험, 관광 등 일체의 인간 활동을 불허하는 해양보호구역은 전 세계 바다의 2%에 불과합니다.</p>
+            바다를 보호하기 위한 가장 효과적인 방법에도 불구하고 어업, 과학실험, 관광 등 일체의 인간 활동을 불허하는 해양보호구역은 전 세계 바다의 2%에 불과합니다.<br><br><br><br></p>
         </div>
         <div class="about-image">
             <img src="images/img1_1.jpg" alt="Coffee Splash" class="center-image">
@@ -48,9 +67,6 @@
                 지난 수십 년간 바다거북, 산호초, 상어를 포함한 해양생물 개체 수는 급격히 감소했습니다.</p>
             <p>문제는 국가 관할권 외 해역, 즉 공해(公海)를 보호할 수 있는 국제 협약이 부재하다는 것입니다.</p>
             <p>그린피스는 ‘해양보호구역’ 지정의 기반이 될 UN 해양조약 제정을 통해 국제사회가 공해 보호의 책임을 다할 것을 요구하고 있습니다.</p>
-            <ul>
-                <li></li>
-            </ul>
         </div>
     </div>
 </div>
@@ -58,8 +74,8 @@
 	<!-- 연구 및 조사 -->
 <div class="timeline-container">
 <div class="about-line"></div>
-    <h1>연구 및 조사</h1>
-    <h2>그린피스는 2018년 남극해 보호 캠페인을 시작으로, 학계와 함께 바다가 직면한 위기와 심각성, 그리고 바다보호의 필요성을 알려왔습니다.<br><br><br><br></h2>
+    <h1 class="green_h1">연구 및 조사</h1>
+    <h2>그린피스는 2018년 남극해 보호 캠페인을 시작으로, 학계와 함께 바다가 직면한 위기와 심각성, <br>그리고 바다보호의 필요성을 알려왔습니다.<br><br><br><br></h2>
     <div class="timeline">
         <div class="timeline-item left">
             <div class="timeline-content">
@@ -92,7 +108,7 @@
 
 <!-- 캠페인 활동 -->
 <div class="campaign-container">
-    <h1>캠페인 활동</h1>
+    <h1 class="green_h1">캠페인 활동</h1>
     <h2>그린피스는 UN 해양조약 체결의 시급성을 알리기 위해 환경감시선을 활용한 조사 및 연구 활동을 진행하며, 그린피스의 해양보호 메시지를 함께 전달하는 시민 모임인 ‘오션 디펜더’와 함께 한국 정부 대표단에 UN해양조약 체결을 요구했습니다.<br><br><br><br></h2>
     <div class="campaign-timeline">
         <div class="campaign-item left">
@@ -131,14 +147,16 @@
 </div>
 
 	<!-- 기부하기 섹션 -->
-<div class="donation-container">
+<div class="donation-container" style="background-image: url('images/img1.jpg');">
     <h1><br></h1>
     <h2>후원으로 변화를 만드세요!</h2>
-    <p>그린피스는 정치, 재정적 독립성을 위해 개인의 후원으로만 운영됩니다. 여러분의 후원으로 주요 환경문제에 맞설 수 있습니다.</p>
-    <button class="donation-button" onclick="location.href='donation.jsp'">기부하기</button>
+    <p>여러분의 후원은 환경 보호 활동을 강화하고 자연 생태계를 복원하는 데 큰 힘이 됩니다. 함께 더 나은 지구를 만들어 갑시다.</p>
+    <button class="donation-button" onclick="location.href='donation_do.jsp'">후원하기</button>
     <h1><br></h1>
 </div>
-    
+
+
+
     <!-- 컨택 섹션 -->
     <footer>
         <div class="contact-container">
