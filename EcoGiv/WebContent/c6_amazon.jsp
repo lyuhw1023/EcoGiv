@@ -150,6 +150,11 @@
             <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
         </div>
     </footer>
+    
+    <!-- 맨 위로 가기 버튼 -->
+    <a href="#" id="back-to-top" class="back-to-top"></a>
+
+    <script src="main.js"></script>
   
 
     

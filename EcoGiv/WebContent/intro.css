@@ -1081,3 +1081,34 @@ button.donation-submit-button:hover {
 #form-section input[type="submit"]:hover {
     background-color: #45a049;
 }
+
+
+/* 맨 위로 가기 버튼 */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #2e8b57 ;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    border-radius: 0; /* Changed from 50% to 0 for square shape */
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #1e5d38;
+}
+
+/* 화살표 아이콘 스타일 */
+.back-to-top::before {
+    content: "ᐱ"; /* Changed content to up arrow */
+    display: inline-block;
+    font-size: 24px;
+}
+
