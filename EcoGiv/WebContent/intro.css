@@ -272,26 +272,22 @@ footer {
 
 .contact-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
     margin-bottom: 20px;
 }
 
-.contact-info {
+.contact-info, .sponsor-info {
     flex: 1;
-    margin-right: 20px;
-    text-align: left;
-}
-
-.sponsor-info {
-    flex: 1;
-    text-align: left;
+    text-align: center;
+    margin: 0 20px;
 }
 
 .logo-text {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
@@ -315,6 +311,8 @@ footer {
 .social-icons a img {
     height: 30px;
 }
+
+
 
 
 
@@ -977,3 +975,109 @@ button.donation-submit-button:hover {
     text-decoration: underline;
 }
 
+
+
+
+
+
+
+/* community */
+
+
+/* Community Section Styles (community.jsp) */
+#list-section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.community-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.community-table th, .community-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.community-table th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.community-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Post title styling */
+.post-title {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-title:hover {
+    color: #333333; /* Dark gray */
+}
+
+/* Actions */
+.actions {
+    text-align: right;
+}
+
+.action-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.action-button:hover {
+    background-color: #45a049;
+}
+
+/* AddPost and ViewPost Form Section Styles (addpost.jsp and viewpost.jsp) */
+#form-section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#form-section table {
+    width: 100%;
+}
+
+#form-section td {
+    padding: 10px;
+}
+
+#form-section input[type="text"], #form-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#form-section input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#form-section input[type="submit"]:hover {
+    background-color: #45a049;
+}
