@@ -7,6 +7,12 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인 처리</title>
+<script type="text/javascript">
+    function showErrorAndRedirect() {
+        alert("로그인 실패: 사용자명 또는 비밀번호가 잘못되었습니다. 다시 시도해 주세요.");
+        window.location.href = "login.jsp";
+    }
+</script>
 </head>
 <body>
    <%@ include file="dbconn.jsp"%>
@@ -30,7 +36,8 @@
               userSession.setAttribute("username", loggedInUser.getUsername());
               response.sendRedirect("home.jsp"); // 로그인 후 홈 페이지로 리디렉션
           } else {
-              out.println("로그인 실패: 사용자명 또는 비밀번호가 잘못되었습니다.");
+              // 로그인 실패 시 스크립트 실행
+              out.println("<script type='text/javascript'>showErrorAndRedirect();</script>");
           }
       } catch (Exception e) {
           e.printStackTrace();
