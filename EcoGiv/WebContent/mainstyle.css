@@ -342,7 +342,7 @@ div {
 
 .description-image {
     flex: 2; /* Adjusted flex size */
-    margin-right: 50px; /* Reduced margin */
+    margin: 0 50px; /* Reduced margin */
 }
 
 .description-image img {
@@ -438,26 +438,22 @@ footer {
 
 .contact-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
     margin-bottom: 20px;
 }
 
-.contact-info {
+.contact-info, .sponsor-info {
     flex: 1;
-    margin-right: 20px;
-    text-align: left;
-}
-
-.sponsor-info {
-    flex: 1;
-    text-align: left;
+    text-align: center;
+    margin: 0 20px;
 }
 
 .logo-text {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
@@ -481,3 +477,4 @@ footer {
 .social-icons a img {
     height: 30px;
 }
+
