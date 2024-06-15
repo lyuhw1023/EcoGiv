@@ -23,6 +23,8 @@
     if (currentSession != null) {
         username = (String) currentSession.getAttribute("username");
     }
+    boolean isAuthor = username != null && username.equals(post.getAuthor());
+    boolean isAdmin = username != null && username.equals("admin");
 %>
 
 <!DOCTYPE html>
@@ -77,14 +79,14 @@
             </tr>
         </table>
         <div class="actions">
-            <% if (username != null && username.equals(post.getAuthor())) { %>
+            <% if (isAuthor || isAdmin) { %>
                 <form action="addpost.jsp" method="get" style="display: inline;">
                     <input type="hidden" name="postId" value="<%= postId %>">
                     <input type="submit" value="수정" class="action-button">
                 </form>
-                <form action="deletepost.jsp" method="post" style="display: inline;">
+                <form action="addpost_process.jsp" method="post" style="display: inline;">
                     <input type="hidden" name="postId" value="<%= postId %>">
-                    <input type="submit" value="삭제" class="action-button">
+                    <input type="submit" name="action" value="삭제" class="action-button" onclick="return confirm('정말 삭제하시겠습니까?');">
                 </form>
             <% } %>
             <a href="community.jsp" class="action-button">목록으로</a>
