@@ -85,32 +85,7 @@
                 </a>
             </div>
         </div>
-    </section>
-
-    <!-- 웹페이지 설명 섹션 -->
-    <!-- <section id="page-description">
-        <div class="description-container">
-            <div class="description-image">
-                <img src="images/main.jpg" alt="기능 설명 이미지">
-            </div>
-            <div class="description-text">
-                <h2>EcoGiv <span class="horizontal-line"></span></h2>
-                <h1>환경 보호 캠페인 플랫폼</h1>
-                <p>EcoGiv는 환경 보호를 위한 다양한 캠페인을 소개하며, 누구나 쉽게 참여할 수 있는 방법을 제공합니다.</p>
-                <p>총 12가지의 환경 보호 캠페인을 통해 환경을 지키는 방법을 소개합니다. 쉽게 참여할 수 있는 다양한 활동들을 만나보세요.</p>
-                <p>기부 페이지를 통해 환경 보호에 동참할 수 있습니다. 여러분의 작은 기부가 큰 변화를 만듭니다.</p>
-                <p>커뮤니티 페이지에서 환경 보호에 관심 있는 사용자들이 의견을 나누고, 경험을 공유할 수 있습니다.</p>
-                <p class="bold">EcoGiv는 작은 행동들이 큰 변화를 만든다고 믿습니다.<br> 지금 바로 참여해보세요. 여러분의 참여가 세상을 바꿉니다.</p>
-            </div>
-        </div>
-    </section> -->
-    
-    
-    
-    
-    
-    
-    
+    </section> 
     
     <!-- 소개 섹션 -->
 <section id="introduction">
