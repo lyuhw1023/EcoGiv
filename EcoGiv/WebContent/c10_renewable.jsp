@@ -17,6 +17,7 @@
         <li><a href="home.jsp" class="menu">홈</a></li>
         <li><a href="introduce.jsp" class="menu">캠페인소개</a></li>
         <li><a href="donation.jsp" class="menu">후원안내</a></li>
+        <li><a href="matching_test.jsp" class="menu">매칭테스트</a></li>
         <li><a href="community.jsp" class="menu">커뮤니티</a></li>
     </ul>
     <div class="nav-buttons">
