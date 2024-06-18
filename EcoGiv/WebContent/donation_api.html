@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후원하기</title>
+    <script src="https://www.paypal.com/sdk/js?client-id=AafahNFYgA9jsBWXOXPUbgEN7YkZIPcMBRjeyo2zhWLtnQoIuPAddQHYoHel10ZPQLipe3XVgCbBoiuo"></script>
+    <link href="intro.css" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="home.html" id="logo">
+            <img src="images/logo.png" alt="Logo" class="logo-image">
+            EcoGiv
+        </a>
+        <ul>
+            <li><a href="introduce.jsp" class="menu">캠페인소개</a></li>
+            <li><a href="donation_api.html" class="menu">후원안내</a></li>
+            <li><a href="matching_test.jsp" class="menu">매칭테스트</a></li>
+            <li><a href="community.jsp" class="menu">커뮤니티</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <span id="username"></span>
+            <a href="donation_api.html" class="donate-button">후원하기</a>
+            <a href="logout.html" id="login-button" class="login-button">로그인</a>
+        </div>
+    </nav>
+
+    <div class="donation-form-container">
+        <h2>후원정보</h2>
+        <form id="donation-form">
+            <div class="donation-info">
+                <div class="input-group">
+                    <label>후원주기</label>
+                    <div class="button-group">
+                        <button type="button" class="toggle-button active" data-value="정기후원">정기후원</button>
+                        <button type="button" class="toggle-button" data-value="일시후원">일시후원</button>
+                        <input type="hidden" name="donationType" value="정기후원">
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="donationName">후원명</label>
+                    <input type="text" id="donationName" name="donationName" placeholder="후원명" required>
+                </div>
+
+                <div class="input-group">
+                    <label>후원금액</label>
+                    <div class="donation-amount">
+                        <input type="radio" id="amount1" name="donationAmount" value="10000" checked>
+                        <label for="amount1">10,000원</label>
+                        <input type="radio" id="amount2" name="donationAmount" value="20000">
+                        <label for="amount2">20,000원</label>
+                        <input type="radio" id="amount3" name="donationAmount" value="30000">
+                        <label for="amount3">30,000원</label>
+                        <input type="radio" id="amount4" name="donationAmount" value="50000">
+                        <label for="amount4">50,000원</label>
+                        <input type="radio" id="amount5" name="donationAmount" value="100000">
+                        <label for="amount5">100,000원</label>
+                        <input type="radio" id="customAmount" name="donationAmount" value="custom">
+                        <label for="customAmount">직접입력</label>
+                        <input type="number" id="customAmountValue" name="customAmountValue" placeholder="금액 입력" style="display: none;">
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            
+            <h2>기본정보</h2>
+            <div class="basic-info">
+                <div class="input-group">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" placeholder="이름" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">핸드폰</label>
+                    <input type="text" id="phone" name="phone" placeholder="핸드폰" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" placeholder="이메일">
+                </div>
+            </div>
+            <br><br><hr><br><br>
+
+            <div class="agreement">                
+                <input type="checkbox" id="agreePersonalInfo" name="agreePersonalInfo" required>
+                <label for="agreePersonalInfo">개인정보수집 및 이용동의</label>
+                
+                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                <label for="agreeTerms">이용약관</label>
+            </div>
+
+            <button type="submit" class="donation-submit-button">신청하기</button>
+        </form>
+    </div>
+
+    <!-- 모달 -->
+    <div id="paypal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="paypal-button-container"></div>
+        </div>
+    </div>
+
+    <!-- 확인 모달 -->
+    <div id="thank-you-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="thank-you-message">
+                <p>후원해주셔서 감사합니다!</p>
+                <button id="confirm-button">확인</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="logo-text">
+                    <img src="images/logo.png" alt="Logo" class="footer-logo">
+                    <h2>EcoGiv</h2>
+                </div>
+                <p>한림대학교 | 제작자 유혜원 | 대표전화 010 - 1234 - 5678 |</p>
+                <p>이메일 lyuhw11023@gmail.com | 상담시간 (월~금) 10:00 ~ 17:00 |</p>
+                <p>© 환경 보호 캠페인 플랫폼</p>
+            </div>
+            <div class="sponsor-info">
+                <h2>후원계좌</h2>
+                <p>국민은행 123123-000000 | 농협은행 078-01-123123</p>
+                <p>신한은행 100-012-345678 | KEB하나은행 225-234234-234</p>
+                <p>우리은행 1002-123-123123 | 우체국 034534-01-34534</p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+        </div>
+    </footer>
+    
+    <!-- 맨 위로 가기 버튼 -->
+    <a href="#" id="back-to-top" class="back-to-top"></a>
+    <script src="main.js"></script>
+    <script>
+        // Client-side logic to handle user session
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = sessionStorage.getItem('username');
+            const usernameSpan = document.getElementById('username');
+            const loginButton = document.getElementById('login-button');
+            
+            if (username) {
+                usernameSpan.textContent = `${username}님`;
+                loginButton.textContent = '로그아웃';
+                loginButton.href = 'logout.html';
+            } else {
+                loginButton.textContent = '로그인';
+                loginButton.href = 'login.html';
+            }
+        });
+    </script>
+
+    <script>
+        // Toggle button functionality
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.toggle-button').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                document.querySelector('input[name="donationType"]').value = this.dataset.value;
+            });
+        });
+
+        // Show/hide custom amount input
+        document.querySelectorAll('input[name="donationAmount"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'custom') {
+                    document.getElementById('customAmountValue').style.display = 'inline-block';
+                } else {
+                    document.getElementById('customAmountValue').style.display = 'none';
+                }
+            });
+        });
+
+        document.getElementById('donation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let amount;
+            const selectedAmount = document.querySelector('input[name="donationAmount"]:checked').value;
+            if (selectedAmount === 'custom') {
+                amount = document.getElementById('customAmountValue').value;
+            } else {
+                amount = selectedAmount;
+            }
+
+            // PayPal 버튼을 모달 안에 렌더링
+            paypal.Buttons({
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: amount
+                            }
+                        }]
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        const thankYouModal = document.getElementById('thank-you-modal');
+                        thankYouModal.style.display = 'block'; // 후원 완료 모달 열기
+                        modal.style.display = 'none'; // 결제 모달 닫기
+                    });
+                }
+            }).render('#paypal-button-container');
+
+            const modal = document.getElementById('paypal-modal');
+            const span = document.getElementsByClassName('close')[0];
+
+            modal.style.display = 'block'; // 모달 열기
+
+            // 모달 닫기 버튼 클릭 이벤트
+            span.onclick = function() {
+                modal.style.display = 'none';
+            }
+
+            // 모달 외부 클릭 시 모달 닫기
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        });
+
+        // 확인 버튼 클릭 시 home.jsp로 이동
+        document.getElementById('confirm-button').addEventListener('click', function() {
+            window.location.href = 'home.jsp';
+        });
+    </script>
+</body>
+</html>
