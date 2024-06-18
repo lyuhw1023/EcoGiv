@@ -13,9 +13,9 @@
             EcoGiv
         </a>
         <ul>
-            <li><a href="home.jsp" class="menu">홈</a></li>
             <li><a href="introduce.jsp" class="menu">캠페인소개</a></li>
             <li><a href="donation.jsp" class="menu">후원안내</a></li>
+            <li><a href="matching_test.jsp" class="menu">매칭테스트</a></li>
             <li><a href="community.jsp" class="menu">커뮤니티</a></li>
         </ul>
         <div class="nav-buttons">
@@ -28,10 +28,10 @@
         if (username != null) {
     %>
         <span><%= username %>님</span>
-        <a href="donation_do.jsp" class="donate-button">후원하기</a>
+        <a href="donation_api.html" class="donate-button">후원하기</a>
         <a href="logout.jsp" class="login-button">로그아웃</a>
     <% } else { %>
-        <a href="donation_do.jsp" class="donate-button">후원하기</a>
+        <a href="donation_api.html" class="donate-button">후원하기</a>
         <a href="login.jsp" class="login-button">로그인</a>
     <% } %>
 </div>
@@ -67,7 +67,7 @@
                 </a>
             </div>
             <div class="feature-box">
-                <a href="donation_do.jsp">
+                <a href="donation_api.html">
                     <img src="images/donation.png" alt="후원하기" class="feature-icon">
                     <div class="feature-text">
                         <h3>후원하기</h3>
@@ -76,10 +76,10 @@
                 </a>
             </div>
             <div class="feature-box">
-                <a href="community.jsp">
-                    <img src="images/community.png" alt="커뮤니티" class="feature-icon">
+                <a href="matching_test.jsp">
+                    <img src="images/match.png" alt="커뮤니티" class="feature-icon">
                     <div class="feature-text">
-                        <h3>커뮤니티</h3>
+                        <h3>매칭테스트</h3>
                         <p>바로가기 ></p>
                     </div>
                 </a>
@@ -122,19 +122,36 @@
 </section>
 <br><br><br><br><br><br>
 
-<!-- 커뮤니티 섹션 -->
+<!-- 매칭테스트 섹션 -->
     <section id="introduction">
         <div class="description-container">
             <div class="description-image">
-                <img src="images/community.jpg" alt="커뮤니티 이미지">
+                <img src="images/matching.jpg" alt="커뮤니티 이미지">
             </div>
             <div class="description-text">
-                <h2>Together<span class="horizontal-line"></span></h2>
+                <h2>Matching<span class="horizontal-line"></span></h2>
+                <p>EcoGiv는 재미있는 매칭 테스트를 통해 여러분에게 딱 맞는 환경 보호 캠페인을 추천해 드립니다. 다양한 질문에 답변하면 여러분의 관심사와 성향에 맞는 캠페인을 찾아드립니다.</p> 
+                <p>여러분의 소중한 참여가 더 깨끗하고 건강한 지구를 만드는데 큰 도움이 됩니다. 지금 테스트를 통해 나에게 맞는 캠페인을 찾아보세요.</p>
+                <p>환경 보호는 우리의 미래를 위한 중요한 행동입니다. 지금 테스트를 시작해 나에게 꼭 맞는 캠페인을 찾아보세요! 함께 더 나은 세상을 만들어 갑시다.<br><br></p>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br><br><br>
+
+
+<!-- 커뮤니티 섹션 -->
+    <section id="introduction">
+        <div class="description-container">
+            <div class="description-text">
+                <h2><span class="horizontal-line"></span>Together</h2>
                 <p>EcoGiv의 커뮤니티 페이지에서는 환경 보호에 관심 있는 사용자들이 의견을 나누고, 경험을 공유할 수 있습니다. 여러분의 생각과 경험이 다른 사람들에게 영감을 주고, 
                 함께 환경을 지키는 힘이 될 수 있습니다. 커뮤니티에 참여해 다양한 정보를 얻고, 더 나은 미래를 위한 아이디어를 나눠보세요.</p>
                 <p>커뮤니티는 환경 보호를 위한 활동을 함께 계획하고, 캠페인에 참여하며, 서로의 경험을 통해 배우는 공간입니다. 다른 사람들과의 소통을 통해 더 많은 사람들이 
                 환경 보호에 관심을 가지게 되고, 더 큰 변화를 만들어낼 수 있습니다.</p>
                 <p>EcoGiv는 작은 행동들이 큰 변화를 만든다고 믿습니다. 지금 바로 커뮤니티에 참여해보세요. 여러분의 참여가 세상을 바꿉니다.</p>
+            </div>
+            <div class="description-image">
+                <img src="images/community.jpg" alt="커뮤니티 이미지">
             </div>
         </div>
     </section>
