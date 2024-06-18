@@ -20,9 +20,9 @@
             EcoGiv
         </a>
         <ul>
-            <li><a href="home.jsp" class="menu">홈</a></li>
             <li><a href="introduce.jsp" class="menu">캠페인소개</a></li>
             <li><a href="donation.jsp" class="menu">후원안내</a></li>
+            <li><a href="matching_test.jsp" class="menu">매칭테스트</a></li>
             <li><a href="community.jsp" class="menu">커뮤니티</a></li>
         </ul>
         <div class="nav-buttons">
@@ -35,10 +35,10 @@
                 if (username != null) {
             %>
                 <span><%= username %>님</span>
-                <a href="donation_do.jsp" class="donate-button">후원하기</a>
+                <a href="donation_api.html" class="donate-button">후원하기</a>
                 <a href="logout.jsp" class="login-button">로그아웃</a>
             <% } else { %>
-                <a href="donation_do.jsp" class="donate-button">후원하기</a>
+                <a href="donation_api.html" class="donate-button">후원하기</a>
                 <a href="login.jsp" class="login-button">로그인</a>
             <% } %>
         </div>
@@ -60,41 +60,36 @@
             if (categoryIndex == -1) {
                 out.println("<h2>캠페인을 매칭하는 데 문제가 발생했습니다. 다시 시도해 주세요.</h2>");
             } else {
-                String[] categories = {
-                    "아마존 보호",
-                    "해양 보호",
-                    "생물 다양성",
-                    "플라스틱 제로",
-                    "디톡스 아웃도어",
-                    "불법 어업 근절",
-                    "기후참정권",
-                    "Rethink IT",
-                    "기업 100% 재생에너지 전환",
-                    "탈원전",
-                    "위험한 석탄 투자",
-                    "북극 보호"
-                };
-
-                String matchedCategory = categories[categoryIndex - 1]; // 인덱스 조정
+                // application 스코프에서 Connection 객체를 가져옵니다.
+                Connection connection = (Connection) application.getAttribute("DBConnection");
+                CampaignDAO campaignDAO = new CampaignDAO(connection);
+                Campaign matchedCampaign = campaignDAO.getCampaignById(categoryIndex);
+                if (matchedCampaign == null) {
+                    out.println("<h2>캠페인을 찾을 수 없습니다. 다시 시도해 주세요.</h2>");
+                } else {
+                    String matchedCategory = matchedCampaign.getTitle();
+                    String detailPageUrl = matchedCampaign.getDetailPageUrl();
         %>
 
         <h2>당신에게 추천하는 캠페인은 <span style="color: #2e8b57;"><%= matchedCategory %></span> 입니다.</h2>
         <img src="images/img<%= categoryIndex %>.jpg" alt="<%= matchedCategory %>">
         <br>
-        <a href="c<%= categoryIndex %>.jsp" class="result-button">캠페인 보러가기</a>
+        <a href="<%= detailPageUrl %>" class="result-button">캠페인 보러가기</a>
         <%
+                }
             }
         %>
     </div>
     
     
-	<!-- 컨택 섹션 -->
+    <!-- 컨택 섹션 -->
     <footer>
         <div class="contact-container">
             <div class="contact-info">
                 <div class="logo-text">
                     <img src="images/logo.png" alt="Logo" class="footer-logo">
-                    <h2>EcoGiv</h2>
+                    <h2>EcoGiv
+                    </h2>
                 </div>
                 <p>한림대학교 | 제작자 유혜원 | 대표전화 010 - 1234 - 5678 |</p>
                 <p>이메일 lyuhw11023@gmail.com | 상담시간 (월~금) 10:00 ~ 17:00 |</p>
