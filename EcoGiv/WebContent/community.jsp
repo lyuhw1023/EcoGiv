@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Community</title>
+    <title>커뮤니티</title>
     <link href="intro.css" rel="stylesheet">
 </head>
 <body>
@@ -18,9 +18,9 @@
             EcoGiv
         </a>
         <ul>
-            <li><a href="home.jsp" class="menu">홈</a></li>
             <li><a href="introduce.jsp" class="menu">캠페인소개</a></li>
             <li><a href="donation.jsp" class="menu">후원안내</a></li>
+            <li><a href="matching_test.jsp" class="menu">매칭테스트</a></li>
             <li><a href="community.jsp" class="menu">커뮤니티</a></li>
         </ul>
         <div class="nav-buttons">
@@ -33,10 +33,10 @@
                 if (username != null) {
             %>
                 <span><%= username %>님</span>
-                <a href="donation_do.jsp" class="donate-button">후원하기</a>
+                <a href="donation_api.html" class="donate-button">후원하기</a>
                 <a href="logout.jsp" class="login-button">로그아웃</a>
             <% } else { %>
-                <a href="donation_do.jsp" class="donate-button">후원하기</a>
+                <a href="donation_api.html" class="donate-button">후원하기</a>
                 <a href="login.jsp" class="login-button">로그인</a>
             <% } %>
         </div>
