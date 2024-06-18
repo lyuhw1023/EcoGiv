@@ -14,7 +14,6 @@
         EcoGiv
     </a>
     <ul>
-        <li><a href="home.jsp" class="menu">홈</a></li>
         <li><a href="introduce.jsp" class="menu">캠페인소개</a></li>
         <li><a href="donation.jsp" class="menu">후원안내</a></li>
         <li><a href="matching_test.jsp" class="menu">매칭테스트</a></li>
@@ -30,10 +29,10 @@
                 if (username != null) {
             %>
                 <span><%= username %>님</span>
-                <a href="donation_do.jsp" class="donate-button">후원하기</a>
+                <a href="donation_api.html" class="donate-button">후원하기</a>
                 <a href="logout.jsp" class="login-button">로그아웃</a>
             <% } else { %>
-                <a href="donation_do.jsp" class="donate-button">후원하기</a>
+                <a href="donation_api.html" class="donate-button">후원하기</a>
                 <a href="login.jsp" class="login-button">로그인</a>
             <% } %>
         </div>
@@ -152,7 +151,7 @@
     <h1><br></h1>
     <h2>후원으로 변화를 만드세요!</h2>
     <p>여러분의 후원은 환경 보호 활동을 강화하고 자연 생태계를 복원하는 데 큰 힘이 됩니다. 함께 더 나은 지구를 만들어 갑시다.</p>
-    <button class="donation-button" onclick="location.href='donation_do.jsp'">후원하기</button>
+    <button class="donation-button" onclick="location.href='donation_api.html'">후원하기</button>
     <h1><br></h1>
 </div>
 
