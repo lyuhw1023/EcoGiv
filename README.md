@@ -13,7 +13,8 @@
 ## 1. 프로젝트 명
 환경 보호 캠페인 플랫폼, EcoGiv
 
-<img src="https://github.com/lyuhw1023/EcoGiv/assets/52669844/2e6d1642-6fec-4f80-ac21-705712138762" width="1000px"/>
+<img src="https://github.com/lyuhw1023/EcoGiv/assets/52669844/e08fe790-5f81-4db7-8183-366693427fd6" width="1000px"/>
+
 
 <br><br>
 
